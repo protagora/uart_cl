@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uartcl"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "pyserial>=3.5",
+    "click>=8.1",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+cli = ["colorama>=0.4"]
+
+[project.scripts]
+uartcl = "uartcl.cli:cli"
